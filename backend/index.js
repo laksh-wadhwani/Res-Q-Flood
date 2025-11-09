@@ -22,3 +22,7 @@ mongoose.connect(process.env.DB_URL)
 app.get("/", async(request, response) => {
     response.json("Backend is working....")
 })
+
+//Admin Routes
+import adminRoutes from "./routes/auth.routes.js"
+app.use("/api/admin", adminRoutes)
